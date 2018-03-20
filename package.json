@@ -4,11 +4,12 @@
   "description": "GDG Admin App",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rorogarcete/bootcamp01.git"
+    "url": "git+https://github.com/gdgcde/bootcamp01.git"
   },
   "keywords": [
     "GDG",
@@ -18,11 +19,12 @@
   "author": "GDG CDE",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rorogarcete/bootcamp01/issues"
+    "url": "https://github.com/gdgcde/bootcamp01/issues"
   },
-  "homepage": "https://github.com/rorogarcete/bootcamp01#readme",
+  "homepage": "https://github.com/gdgcde/bootcamp01#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "compression": "^1.7.2",
     "express": "^4.16.3",
     "method-override": "^2.3.10",
     "morgan": "^1.9.0",

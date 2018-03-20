@@ -23,12 +23,12 @@ module.exports = (sequelize, DataTypes) => {
   });
   Evento.associate = function(models) {
     // associations can be defined here
-    Evento.hasMany(models.Ciudad, {
-      onDelete: 'cascade'
-    });
-    Evento.hasMany(models.Tipo_Evento, {
-      onDelete: 'cascade'
-    });
+    // Evento.hasMany(models.Ciudad, {
+    //   onDelete: 'cascade'
+    // });
+    // Evento.hasMany(models.Tipo_Evento, {
+    //   onDelete: 'cascade'
+    // });
   };
   
   return Evento;

@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 // compress all responses
 app.use(compression());
 // enable all CORS requests
-app.use(cors());
+// app.use(cors());
 // Lets you use HTTP verbs such as PUT or DELETE in places where the client doesn’t support it.
 app.use(methodOverride());
 // HTTP request logger middleware for node.js

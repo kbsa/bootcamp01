@@ -4,11 +4,11 @@ var eventos = require('../controllers/eventos');
 
 module.exports = function(router) {
     // Eventos
-    app.get('/eventos', eventos.index);
-    app.get('/eventos/:id', eventos.show);
-    app.post('/eventos', eventos.create);
-    app.put('/eventos/:id', eventos.update);
-    app.delete('/eventos', eventos.delete);
+    router.get('/eventos', eventos.index);
+    router.get('/eventos/:id', eventos.show);
+    router.post('/eventos', eventos.create);
+    router.put('/eventos/:id', eventos.update);
+    router.delete('/eventos', eventos.delete);
     
     // Ciudad
 
