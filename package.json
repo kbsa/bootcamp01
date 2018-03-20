@@ -1,0 +1,24 @@
+{
+  "name": "bootcamp01",
+  "version": "1.0.0",
+  "description": "GDG Admin App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rorogarcete/bootcamp01.git"
+  },
+  "keywords": [
+    "GDG",
+    "CDE",
+    "BOOTCAMP"
+  ],
+  "author": "GDG CDE",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rorogarcete/bootcamp01/issues"
+  },
+  "homepage": "https://github.com/rorogarcete/bootcamp01#readme"
+}
