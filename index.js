@@ -13,14 +13,14 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json());
 // compress all responses
 app.use(compression());
-// enable all CORS requests
-// app.use(cors());
 // Lets you use HTTP verbs such as PUT or DELETE in places where the client doesn’t support it.
 app.use(methodOverride());
 // HTTP request logger middleware for node.js
 app.use(morgan('dev'));
+// enable all CORS requests
+// app.use(cors());
 
-app.use(express.static(process.cwd + '/public'));
+app.use(express.static(__dirname + '/public'));
 
 // App routes
 app.use(routes(express.Router()));

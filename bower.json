@@ -1,0 +1,23 @@
+{
+  "name": "bootcamp01",
+  "description": "GDG Admin App",
+  "main": "index.js",
+  "authors": [
+    "GDG CDE"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "GDG",
+    "CDE",
+    "BOOTCAMP"
+  ],
+  "homepage": "https://github.com/rorogarcete/bootcamp01",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
