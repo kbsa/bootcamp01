@@ -1,6 +1,6 @@
 (function(){
 	'use strict';
-
+	
 	angular
 		.module('gdgAdmin')
 		.service('dataService', dataService)
@@ -36,7 +36,7 @@
 				})
 				.catch(function (error) {
 					console.log(error)
-				})
+				});
 		}
 
 		function getEntityById(table, id) {
@@ -56,6 +56,12 @@
 			}
 
 			return $http.get(endpoint + '/' + id)
+				.then(function(result) {
+					return result.data
+				})
+				.catch(function (error) {
+					console.log(error)
+				});
 		}
 
 		function saveEntity(table, data) {
