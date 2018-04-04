@@ -5,25 +5,40 @@
 		.module('gdgAdmin')
 		.controller('patrocinadorFormController',patrocinadorFormController)
 
-	patrocinadorFormController.$inject = ['$scope','$state','$stateParams', 'dataService']
+	patrocinadorFormController.$inject = ['$scope', '$state', '$stateParams', 'dataService']
 	
 	function patrocinadorFormController($scope, $state, $stateParams, dataService){
-		console.log($stateParams.id)
-
-
-		activate()
-
-		function activate(){
-			$scope.guardarPatrocinador = function(patrocinador) {
-				dataService.save(patrocinador)
-					.then(function(result) {
-						console.log(result)
-						$state.go('patrocinador')
+		var vm = this;
+        vm.patrocinador = {};
+        vm.table_name = 'patrocinador';
+        activate();
+        
+        vm.submitPatrocinador = function () {
+            if ($state.current.name == 'patrocinador-form') {
+                return dataService.saveEntity(vm.table_name, vm.patrocinador)
+                    .then(function (result) {
+                        $state.go('patrocinador');
 					})
 					.catch(function(error) {
 						console.log(error)
-					})
-				// $scope.evento = null
+					});
+            } else {
+                return dataService.updateEntity(vm.table_name, vm.patrocinador)
+                    .then(function (result) {
+                        $state.go('patrocinador');
+                    });
+            } 
+		}
+		
+		function activate() {
+            if ($state.current.name == 'patrocinador-edit') {
+                getPatrocinadorById()
+                .then(function(patrocinador) {
+                    vm.patrocinador = patrocinador;
+				})
+				.catch(function(error) {
+					console.log(error)
+				});
 			}
 		}
 	}

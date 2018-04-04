@@ -57,13 +57,13 @@
 		})
 		.state('patrocinador-form', {
 			url: '/patrocinador-form', 
-			templateUrl: 'app/patrocinador/patrocinador-form.html', 
+			templateUrl: 'app/patrocinadores/patrocinador-form.html', 
 			controller: 'patrocinadorFormController',
 			controllerAs: 'vm',
 		})
 		.state('patrocinador-edit', {
 			url: '/patrocinador-form/:id', 
-			templateUrl: 'app/patrocinador/patrocinador-form.html', 
+			templateUrl: 'app/patrocinadores/patrocinador-form.html', 
 			controller: 'patrocinadorEditController',
 			controllerAs: 'vm',
 		})

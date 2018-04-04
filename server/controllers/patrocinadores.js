@@ -1,12 +1,12 @@
-var patrocinadores = require('../../server/models').patrocinadores
+var patrocinador = require('../models').patrocinadores
 
 module.exports = {
 	//Lista de eventos
 	index(request, response) {
 
-		patrocinadores.findAll()
-		.then(function(patrocinadores) {
-			response.status(200).json(patrocinadores)
+		patrocinador.findAll()
+		.then(function(patrocinador) {
+			response.status(200).json(patrocinador)
 		})
 		.catch(function(error) {
 			response.status(500).json(error)
@@ -14,9 +14,9 @@ module.exports = {
 	},
 	//retornar un evento
 	show(request, response) {
-		patrocinadores.findById(request.params.id,{})
-		.then(function(patrocinadores) {
-			response.status(200).json(patrocinadores)
+		patrocinador.findById(request.params.id,{})
+		.then(function(patrocinador) {
+			response.status(200).json(patrocinador)
 		})
 		.catch(function(error) {
 			response.status(500).json(error)
@@ -24,9 +24,9 @@ module.exports = {
 	},
 
 	create(request, response) {
-		patrocinadores.create(request.body)
-		.then(function(patrocinadores) {
-			response.status(200).json(patrocinadores)
+		patrocinador.create(request.body)
+		.then(function(patrocinador) {
+			response.status(200).json(patrocinador)
 		})
 		.catch(function(error) {
 			response.status(500).json(error)
@@ -34,13 +34,13 @@ module.exports = {
 	},
 
 	update(request, response) {
-		patrocinadores.update(request.body, {
+		patrocinador.update(request.body, {
 			where: {
 				id: request.params.id
 			}
 		})
-		.then(function(patrocinadores) {
-			response.status(200).json(patrocinadores)
+		.then(function(patrocinador) {
+			response.status(200).json(patrocinador)
 		})
 		.catch(function(error) {
 			response.status(500).json(error)
@@ -48,13 +48,13 @@ module.exports = {
 	},
 
 	delete(request, response) {
-		patrocinadores.destroy({
+		patrocinador.destroy({
 			where: {
 				id: request.params.id
 			}
 		})
-		.then(function(patrocinadores) {
-			response.status(200).json(patrocinadores)
+		.then(function(patrocinador) {
+			response.status(200).json(patrocinador)
 		})
 		.catch(function(error) {
 			response.status(500).json(error)

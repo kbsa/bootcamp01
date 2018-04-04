@@ -10,15 +10,15 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr ng-repeat="patrocinador in patrocinador track by $index">
-				<td>{{patrocinador.nombre}}</td>
-				<td>{{patrocinador.direccion}}</td>
-				<td>{{patrocinador.descripcion}}</td>
+			<tr ng-repeat="w in vm.patrocinadores track by $index">
+				<td>{{w.nombre}}</td>
+				<td>{{w.direccion}}</td>
+				<td>{{w.descripcion}}</td>
 				<td>
-					<a ui-sref="patrocinador-edit({id: patrocinador.id})">Editar</a><br>
+					<a ui-sref="patrocinador-edit({id: w.id})">Editar</a><br>
 				</td>
 				<td>
-					<button class="btn btn-danger" ng-click="delete(patrocinador.id)">Eliminar</button>
+					<button class="btn btn-danger" ng-click="vm.deletePatrocinador(w.id)">Eliminar</button>
 				</td>
 			</tr>
 		</tbody>
